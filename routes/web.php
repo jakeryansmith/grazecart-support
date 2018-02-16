@@ -16,8 +16,7 @@ Route::group(['namespace' => 'Marketing'], function() {
     Route::get('guides/{guides}', 'GuidesController@show');
 });
 
-
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function()
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'auth'], function()
 {
 	Route::get('/', 'TopicController@index');
 
@@ -44,3 +43,5 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function()
     Route::get('guides/{guides}/edit', 'GuidesController@edit');
     Route::put('guides/{guides}', 'GuidesController@update');
 });
+
+Auth::routes();
