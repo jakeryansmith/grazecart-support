@@ -111,7 +111,7 @@
 			</a> --}}
 
 			<a href="http://kimhitzfieldphotography.zenfolio.com/" class="helpIndex_card pa-lg shadow-soft">
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="fas fa-image"></i>
 					</div>
