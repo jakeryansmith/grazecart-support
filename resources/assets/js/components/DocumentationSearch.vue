@@ -3,7 +3,7 @@
     <form action="/docs/search" method="GET">
     <ais-index
       :search-store="searchStore" 
-      index-name="local_ARTICLE_SECTIONS" 
+      index-name="GC_DOCUMENTATION" 
       :auto-search="true" 
     >
     </ais-index>

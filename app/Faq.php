@@ -14,7 +14,7 @@ class Faq extends Model
 
     public function searchableAs()
     {
-        return env('APP_ENV').'_ARTICLE_SECTIONS';
+        return 'GC_DOCUMENTATION';
     }
 
     public function toSearchableArray()

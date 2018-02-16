@@ -23533,7 +23533,7 @@ var render = function() {
         _c("ais-index", {
           attrs: {
             "search-store": _vm.searchStore,
-            "index-name": "local_ARTICLE_SECTIONS",
+            "index-name": "GC_DOCUMENTATION",
             "auto-search": true
           }
         }),

@@ -15,7 +15,7 @@ class Guide extends Model
 
     public function searchableAs()
     {
-        return env('APP_ENV').'_GUIDES';
+        return 'GC_DOCUMENTATION';
     }
 
     public function toSearchableArray()
