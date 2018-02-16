@@ -14,7 +14,7 @@
 		<div class="helpIndex_innerContainer">
 			<a href="/docs" class="helpIndex_card pa-lg shadow-soft">
 
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="fas fa-info-circle"></i>
 					</div>
@@ -31,7 +31,7 @@
 			</a>
 
 			<a href="/faqs" class="helpIndex_card pa-lg shadow-soft">
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="far fa-question-circle"></i>
 					</div>
@@ -47,7 +47,7 @@
 			</a>
 
 			<a href="/guides" class="helpIndex_card pa-lg shadow-soft">
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="fas fa-user-circle"></i>
 					</div>
@@ -63,7 +63,7 @@
 			</a>
 
 			<a href="https://www.facebook.com/grazecart/" class="helpIndex_card pa-lg shadow-soft">
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="far fa-comments"></i>
 					</div>
@@ -79,7 +79,7 @@
 			</a>
 
 			<a href="https://grazecart.com/contact" class="helpIndex_card pa-lg shadow-soft">
-				<div class="flex align-items-b">
+				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="far fa-envelope-open"></i>
 					</div>
