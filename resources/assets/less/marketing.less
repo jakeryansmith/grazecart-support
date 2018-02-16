@@ -1,0 +1,123 @@
+@site-width: 1000px;
+@site-width-narrow: 600px;
+@footer-height: 100px;
+@mobile-break-point: 900px;
+
+// Spacing
+@spacing-none: 0;
+@spacing-extra-extra-small: 0.125rem;
+@spacing-extra-small: 0.25rem;
+@spacing-small: 0.5rem;
+@spacing-medium-small: 0.75rem;
+@spacing-medium: 1rem;
+@spacing-large: 2rem;
+@spacing-extra-large: 4rem;
+@spacing-extra-extra-large: 6rem;
+
+
+@import "faq";
+@import "topics";
+@import "guides";
+@import "header";
+@import "footer";
+@import "page-header";
+@import "search-results";
+@import "article";
+@import "navigation";
+@import "search-input";
+
+body {
+	padding-top: 76px;
+}
+
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -64px + -32px;
+    visibility: hidden;
+}
+
+.ls-1 {
+	letter-spacing: 0.05rem;
+}
+
+.ls-2 {
+	letter-spacing: 0.10rem;
+}
+
+.ls-3 {
+	letter-spacing: 0.15rem;
+}
+
+.ls-4 {
+	letter-spacing: 0.20rem;
+}
+
+.ls-5 {
+	letter-spacing: 0.25rem;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+
+.text-indent-minus-2 {
+	text-indent: -2px;
+}
+
+.pageHeader {
+	width: 100%;
+	max-width: @site-width;
+	flex: 0 0 auto;
+	margin: 0 auto 4rem auto;
+}
+
+.pageHeader_heading {
+	letter-spacing: 0.15rem;
+	line-height: 2.5rem;
+	font-size: 2rem;
+}
+
+
+.main {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.main_container {
+	padding: 4rem 2rem;
+	flex: 1 0 auto;
+}
+
+
+.documentation_container {
+	max-width: @site-width;
+	margin: 0 auto;
+	display: flex;
+}
+
+
+.show-mobile {
+	display: none;
+}
+
+.hidden-mobile {
+	display: block;
+}
+
+@media screen and (max-width: @mobile-break-point) {
+	.show-mobile {
+		display: block !important;
+	}
+
+	.hidden-mobile {
+		display: none !important;
+	}
+
+	.documentation_container {
+		display: block;
+	}
+}

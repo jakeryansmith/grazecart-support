@@ -1,0 +1,36 @@
+.pageHeader_container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(165, 55%, 45%);
+	background: linear-gradient(90deg, hsl(165, 55%, 45%) 0%, hsl(165, 55%, 55%) 100%);
+	color: #FFF;
+	height: 250px;
+	padding: 0 2rem;
+}
+
+.pageHeader_innerContainer {
+	flex: 1 1 auto;
+	max-width: @site-width;
+	margin: 0 auto;
+}
+
+.pageHeader_innerContainer i {
+	font-size: 4rem;
+}
+
+@media screen and (max-width: @mobile-break-point) {
+	.pageHeader_container {
+		height: 175px;
+	}
+
+	.pageHeader_innerContainer i {
+		display: none;
+	}
+
+	.fs-5 {
+		font-size: 2.25rem !important;
+	}
+}
+

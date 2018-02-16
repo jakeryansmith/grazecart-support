@@ -1,0 +1,40 @@
+.guides_innerContainer {
+	max-width: @site-width;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 4rem;
+}
+
+.guide_innerContainer {
+	max-width: @site-width-narrow;
+	margin: 0 auto;
+}
+
+.guide_content {
+	line-height: 1.75;
+	h2 {
+		font-size: 1.25rem;
+		font-weight: bolder;
+		margin: 4rem 0 2rem 0;
+		color: hsl(165, 3%, 30%);
+	}
+	p {
+		margin-bottom: 2rem;
+	}
+	img {
+		display: block;
+		max-width: 100%;
+		margin: 0.5rem auto;
+		box-shadow: 0 7px 6px -6px rgba(50,50,93,.2);
+		border-radius: 0.25rem;
+	}
+}
+
+@media screen and (max-width: @mobile-break-point) {
+
+	.guides_innerContainer {
+		grid-template-columns: 1fr;
+		grid-gap: 4rem;
+	}
+}
