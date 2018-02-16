@@ -21,6 +21,21 @@ return [
             'sort_order' => 4,
             'id' => 4,
             'title' => 'The ordering process',
-        ]
+        ],
+        5 => [
+            'sort_order' => 5,
+            'id' => 5,
+            'title' => 'Trial accounts',
+        ],
+        6 => [
+            'sort_order' => 6,
+            'id' => 6,
+            'title' => 'General',
+        ],
+        7 => [
+            'sort_order' => 7,
+            'id' => 7,
+            'title' => 'Domains',
+        ],
     ]
 ];
