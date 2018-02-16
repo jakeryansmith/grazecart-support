@@ -1,4 +1,4 @@
-@extends('marketing.layout')
+@extends('marketing.layout', ['pageTitle' => 'Search Results'])
 
 @section('content')
 	<div class="searchResults_container">

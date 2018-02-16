@@ -1,4 +1,4 @@
-@extends('marketing.layout')
+@extends('marketing.layout', ['pageTitle' => $guide->title])
 
 @section('content')
     <div class="guide_container">

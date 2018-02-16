@@ -1,4 +1,4 @@
-@extends('marketing.layout')
+@extends('marketing.layout', ['pageTitle' => $faq->title])
 
 @section('content')
     <div class="faq_answerContainer">

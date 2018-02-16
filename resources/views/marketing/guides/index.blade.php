@@ -1,4 +1,4 @@
-@extends('marketing.layout')
+@extends('marketing.layout', ['pageTitle' => 'GrazeCart Guides'])
 
 @section('page_header')
 	<div class="pageHeader_container">

@@ -1,4 +1,4 @@
-@extends('marketing.layout')
+@extends('marketing.layout' , ['pageTitle' => $article->title])
 
 @section('content')
 <div class="documentation_container">

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>{{ $page_title or 'GrazeCart: The Shopping Cart For Small Farms' }}</title>
+    <title>{{ $pageTitle ?? 'GrazeCart: The Shopping Cart For Small Farms' }}</title>
     <meta charset="utf-8">
     <meta id="token" name="token" value="{{ csrf_token() }}">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,6 +25,7 @@
     <div class="main_container">
         @yield('content')
     </div>
+    @yield('page_footer')
     <div class="footer_container">
         <div class="footer_innerContainer">
             <div>
