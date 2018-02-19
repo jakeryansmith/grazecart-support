@@ -49,7 +49,7 @@ class FaqController extends Controller
             'body' => 'required',
         ]);
        return tap(Faq::findOrFail($faqId))->update($request->only([
-            'title','body','visible','category_id','keywords','url'
+            'title','body','visible','category_id','keywords','url','sort_order'
         ]));
     }
 
