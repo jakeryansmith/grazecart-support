@@ -3676,34 +3676,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3771,8 +3743,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			eventHub.$emit('showProgressBar');
 			axios.put('/api/topics/' + this.topic.id + '/articles/' + this.article.id + '/sections/' + section.id, section).then(function (response) {
 				eventHub.$emit('hideProgressBar');
-				this.hideModal('editSectionModal');
-				this.fetchSections();
 			}.bind(this)).catch(function (error) {
 				this.hideModal('editSectionModal');
 				eventHub.$emit('hideProgressBar');
@@ -26603,110 +26573,6 @@ var render = function() {
                     }
                   },
                   [_vm._v("Create Section")]
-                )
-              ])
-            ]
-          )
-        ])
-      ]
-    ),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "gc-modal gc-modal-mask",
-        attrs: { id: "editSectionModal" },
-        on: {
-          click: function($event) {
-            _vm.hideModal("editSectionModal")
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "gc-modal-wrapper" }, [
-          _c(
-            "div",
-            {
-              staticClass: "gc-modal-container gc-modal-container--large",
-              on: {
-                click: function($event) {
-                  $event.stopPropagation()
-                }
-              }
-            },
-            [
-              _c("div", { staticClass: "gc-modal-header" }, [
-                _vm._v("\n\t\t\t\t\tEdit Section\n\t\t\t\t")
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "gc-modal-body" },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Name")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.section.title,
-                          expression: "section.title"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "text" },
-                      domProps: { value: _vm.section.title },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.section.title = $event.target.value
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("text-editor", {
-                    attrs: { name: "sectionEdit", content: _vm.section.body },
-                    on: { input: _vm.updateSectionBody }
-                  })
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "gc-modal-footer" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-alt",
-                    attrs: { type: "button" },
-                    on: {
-                      click: function($event) {
-                        _vm.hideModal("editSectionModal")
-                      }
-                    }
-                  },
-                  [_vm._v("Cancel")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-action",
-                    attrs: {
-                      type: "button",
-                      disabled: !_vm.section.title.length
-                    },
-                    on: {
-                      click: function($event) {
-                        _vm.updateSection(_vm.section)
-                      }
-                    }
-                  },
-                  [_vm._v("Save Section")]
                 )
               ])
             ]

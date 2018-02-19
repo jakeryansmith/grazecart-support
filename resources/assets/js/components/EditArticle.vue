@@ -50,34 +50,6 @@
 			</div>
 		</div>
 
-		<div class="gc-modal gc-modal-mask" id="editSectionModal" @click="hideModal('editSectionModal')">
-			<div class="gc-modal-wrapper">
-				<div class="gc-modal-container gc-modal-container--large" @click.stop>
-					
-					<div class="gc-modal-header">
-						Edit Section
-					</div>
-		
-					<div class="gc-modal-body">
-						<div class="form-group">
-							<label>Name</label>
-							<input type="text" class="form-control" v-model="section.title">
-						</div>
-						<text-editor 
-							name="sectionEdit" 
-							:content="section.body" 
-							v-on:input="updateSectionBody"
-							></text-editor>
-					</div>
-		
-					<div class="gc-modal-footer">
-						<button type="button" class="btn btn-alt" @click="hideModal('editSectionModal')">Cancel</button>
-		                <button type="button" class="btn btn-action" @click="updateSection(section)" :disabled="!section.title.length">Save Section</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="gc-modal gc-modal-mask" id="removeSectionModal" @click="hideModal('removeSectionModal')">
 			<div class="gc-modal-wrapper">
 				<div class="gc-modal-container" @click.stop>
@@ -171,8 +143,6 @@
 				eventHub.$emit('showProgressBar');
 				axios.put('/api/topics/'+this.topic.id+'/articles/'+this.article.id+'/sections/'+section.id, section).then(function(response) {
 					eventHub.$emit('hideProgressBar');
-					this.hideModal('editSectionModal');
-					this.fetchSections();
 				}.bind(this))
 				.catch(function(error) {
 					this.hideModal('editSectionModal');
