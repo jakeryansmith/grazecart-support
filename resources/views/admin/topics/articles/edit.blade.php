@@ -28,6 +28,10 @@
 	    		{!! csrf_field() !!}
 	    		{!! method_field('PUT') !!}
 	    		<div class="form-group">
+                    <label>Title</label>
+                    <input type="text" name="title" class="form-control" value="{{ $article->title }}">
+                </div> 
+	    		<div class="form-group">
                     <div class="radio">
                         <label class="mr-sm">
                             <input tabindex="1" type="radio" name="visible" value="1" @if($article->visible) checked @endif> Visible

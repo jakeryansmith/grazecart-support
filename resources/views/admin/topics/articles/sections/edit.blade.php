@@ -27,6 +27,10 @@
 				<div class="panel">
 					<div class="panel-body">
 						<div class="form-group">
+		                    <label>Title</label>
+		                    <input type="text" name="title" class="form-control" value="{{ $section->title }}">
+		                </div>
+						<div class="form-group">
 		                    <div class="radio">
 		                        <label class="mr-sm">
 		                            <input tabindex="1" type="radio" name="visible" value="1" @if($section->visible) checked @endif> Visible

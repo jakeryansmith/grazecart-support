@@ -36,6 +36,10 @@
                     </div>
                 </div>
                 <div class="form-group">
+                	<label>Title</label>
+                    <input type="text" name="title" class="form-control" value="{{ $guide->title }}">
+                </div>
+                <div class="form-group">
                 	<label>Cover Photo</label>
                     <input type="text" name="cover_photo" class="form-control" value="{{ $guide->cover_photo }}">
                 </div>

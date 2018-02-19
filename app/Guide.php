@@ -15,7 +15,7 @@ class Guide extends Model
 
     public function searchableAs()
     {
-        return 'GC_DOCUMENTATION';
+        return config('scout.algolia.index');
     }
 
     public function toSearchableArray()

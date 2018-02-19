@@ -29,6 +29,7 @@ class TopicArticleSectionController extends Controller
         ]);
 
         ArticleSection::findOrFail($section)->update([
+            'title' => $request->get('title'),
             'description' => $request->get('description'),
             'url' => $request->get('url'),
             'keywords' => $request->get('keywords'),
