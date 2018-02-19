@@ -596,6 +596,10 @@
   margin: 1rem;
 }
 @media screen and (max-width: 900px) {
+  .searchInput_container--active {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
   .documentationSearch {
     position: static;
   }
