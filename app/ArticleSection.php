@@ -9,7 +9,7 @@ use League\HTMLToMarkdown\HtmlConverter;
 
 class ArticleSection extends Model
 {
-    use Sluggable, Searchable;
+    use Sluggable;
 
     protected $guarded = ['id'];
 
