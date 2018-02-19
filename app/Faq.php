@@ -25,7 +25,8 @@ class Faq extends Model
             'description' => $this->description,
             'keywords' => $this->keywords,
             'type' => 'section',
-            'url' => $this->url
+            'url' => $this->url,
+            'sort_order' => $this->sort_order
         ];
     }
 
