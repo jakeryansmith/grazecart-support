@@ -59,11 +59,7 @@ class TopicArticleSectionController extends Controller
      */
     public function update(Request $request, $topicId, $articleId, $sectionId) {
         return tap(ArticleSection::findOrFail($sectionId))
-            ->update($request->validate([
-                'title' => 'required',
-                'sort_order' => 'integer',
-                'body' => 'required'
-            ]));
+            ->update($request->only('sort_order'));
     }
 
     /**
