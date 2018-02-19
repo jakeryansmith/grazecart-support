@@ -544,6 +544,10 @@
 .documentationSearch_input:focus::-webkit-input-placeholder {
   opacity: 0.3;
 }
+.searchInput_container--active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
 .searchInput_placeholder {
   position: absolute;
   z-index: 998;

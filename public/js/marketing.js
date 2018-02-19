@@ -7810,6 +7810,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -23538,120 +23541,132 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "searchInput_container" }, [
-          _c("span", { staticClass: "fas fa-search" }),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.searchStore.query,
-                expression: "searchStore.query"
-              }
-            ],
-            staticClass: "form-control documentationSearch_input",
-            attrs: {
-              type: "text",
-              name: "q",
-              placeholder: "",
-              autocapitalize: "off",
-              autocomplete: "off",
-              autocorrect: "off"
-            },
-            domProps: { value: _vm.searchStore.query },
-            on: {
-              blur: function($event) {
-                _vm.showResults = false
-              },
-              focus: function($event) {
-                _vm.showResults = true
-              },
-              keydown: [
-                function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "up", 38)
-                  ) {
-                    return null
-                  }
-                  $event.preventDefault()
-                  _vm.scanUp($event)
-                },
-                function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "down", 40)
-                  ) {
-                    return null
-                  }
-                  _vm.scanDown($event)
-                },
-                function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "enter", 13)
-                  ) {
-                    return null
-                  }
-                  $event.preventDefault()
-                  _vm.select($event)
-                },
-                function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "esc", 27)
-                  ) {
-                    return null
-                  }
-                  _vm.clearResults()
+        _c(
+          "div",
+          {
+            staticClass: "searchInput_container",
+            class: {
+              "searchInput_container--active":
+                _vm.searchStore.query.length > 0 &&
+                _vm.searchStore.results.length &&
+                _vm.showResults
+            }
+          },
+          [
+            _c("span", { staticClass: "fas fa-search" }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.searchStore.query,
+                  expression: "searchStore.query"
                 }
               ],
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              staticClass: "form-control documentationSearch_input",
+              attrs: {
+                type: "text",
+                name: "q",
+                placeholder: "",
+                autocapitalize: "off",
+                autocomplete: "off",
+                autocorrect: "off"
+              },
+              domProps: { value: _vm.searchStore.query },
+              on: {
+                blur: function($event) {
+                  _vm.showResults = false
+                },
+                focus: function($event) {
+                  _vm.showResults = true
+                },
+                keydown: [
+                  function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "up", 38)
+                    ) {
+                      return null
+                    }
+                    $event.preventDefault()
+                    _vm.scanUp($event)
+                  },
+                  function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "down", 40)
+                    ) {
+                      return null
+                    }
+                    _vm.scanDown($event)
+                  },
+                  function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "enter", 13)
+                    ) {
+                      return null
+                    }
+                    $event.preventDefault()
+                    _vm.select($event)
+                  },
+                  function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "esc", 27)
+                    ) {
+                      return null
+                    }
+                    _vm.clearResults()
+                  }
+                ],
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.searchStore.query = $event.target.value
                 }
-                _vm.searchStore.query = $event.target.value
               }
-            }
-          }),
-          _vm._v(" "),
-          _c("span", {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.searchStore.query.length,
-                expression: "searchStore.query.length"
-              }
-            ],
-            staticClass: "fas fa-times-circle",
-            on: {
-              click: function($event) {
-                _vm.clearResults()
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
+            }),
+            _vm._v(" "),
+            _c("span", {
               directives: [
                 {
                   name: "show",
                   rawName: "v-show",
-                  value: !_vm.searchStore.query.length,
-                  expression: "!searchStore.query.length"
+                  value: _vm.searchStore.query.length,
+                  expression: "searchStore.query.length"
                 }
               ],
-              staticClass: "searchInput_placeholder"
-            },
-            [
-              _c("span", { staticClass: "text-primary" }, [_vm._v("Search")]),
-              _vm._v(" docs, faqs, guides")
-            ]
-          )
-        ])
+              staticClass: "fas fa-times-circle",
+              on: {
+                click: function($event) {
+                  _vm.clearResults()
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: !_vm.searchStore.query.length,
+                    expression: "!searchStore.query.length"
+                  }
+                ],
+                staticClass: "searchInput_placeholder"
+              },
+              [
+                _c("span", { staticClass: "text-primary" }, [_vm._v("Search")]),
+                _vm._v(" docs, faqs, guides")
+              ]
+            )
+          ]
+        )
       ],
       1
     ),

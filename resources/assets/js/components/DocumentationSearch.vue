@@ -7,7 +7,10 @@
       :auto-search="true" 
     >
     </ais-index>
-    <div class="searchInput_container">
+    <div 
+      class="searchInput_container" 
+      :class="{'searchInput_container--active': searchStore.query.length > 0 && searchStore.results.length && showResults}"
+    >
       <span class="fas fa-search"></span>
       <input 
         type="text" 
