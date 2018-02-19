@@ -29,7 +29,7 @@
       <div class="searchInput_placeholder" v-show="!searchStore.query.length"><span class="text-primary">Search</span> docs, faqs, guides</div>
     </div>
     </form>
-    <div v-show="searchStore.query.length > 0 && showResults" class="documentationSearch__resultsList shadow">
+    <div v-show="searchStore.query.length > 0 && searchStore.results.length && showResults" class="documentationSearch__resultsList shadow">
       <ul class="text-left">
         <li 
           v-for="result in searchStore.results" 

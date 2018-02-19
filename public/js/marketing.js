@@ -23663,8 +23663,12 @@ var render = function() {
           {
             name: "show",
             rawName: "v-show",
-            value: _vm.searchStore.query.length > 0 && _vm.showResults,
-            expression: "searchStore.query.length > 0 && showResults"
+            value:
+              _vm.searchStore.query.length > 0 &&
+              _vm.searchStore.results.length &&
+              _vm.showResults,
+            expression:
+              "searchStore.query.length > 0 && searchStore.results.length && showResults"
           }
         ],
         staticClass: "documentationSearch__resultsList shadow"
