@@ -1,6 +1,6 @@
 <template>
   <div class="documentationSearch">
-    <form action="/docs/search" method="GET">
+    <form action="/docs/search" method="GET" id="searchForm">
     <ais-index
       :search-store="searchStore" 
       index-name="GC_DOCUMENTATION" 
@@ -95,8 +95,7 @@
         }
         else
         {
-          this.searchStore.query;
-
+          document.getElementById('searchForm').submit();
         }
       },
 

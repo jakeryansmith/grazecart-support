@@ -7848,7 +7848,7 @@ var searchStore = Object(__WEBPACK_IMPORTED_MODULE_1_vue_instantsearch__["a" /* 
       if (result) {
         this.openResult(result);
       } else {
-        this.searchStore.query;
+        document.getElementById('searchForm').submit();
       }
     },
 
@@ -23528,7 +23528,7 @@ var render = function() {
   return _c("div", { staticClass: "documentationSearch" }, [
     _c(
       "form",
-      { attrs: { action: "/docs/search", method: "GET" } },
+      { attrs: { action: "/docs/search", method: "GET", id: "searchForm" } },
       [
         _c("ais-index", {
           attrs: {

@@ -11,8 +11,12 @@ class DocumentationSearchController extends Controller
 {
     public function index(Request $request)
     {
+        $articleResults = ArticleSection::search($request->input('q'))->get();
+        $faqResults = Faq::search($request->input('q'))->get();
+
         return view('marketing.documentation.search')
-            ->withFaqResults(Faq::search($request->input('q'))->get())
-            ->withArticleResults(ArticleSection::search($request->input('q'))->get());
+            ->withCount($faqResults->count() + $articleResults->count())
+            ->withFaqResults($faqResults)
+            ->withArticleResults($articleResults);
     }
 }
