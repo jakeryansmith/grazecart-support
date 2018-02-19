@@ -31,10 +31,21 @@
 	}
 }
 
+.guideTitle, .guideDescription {
+	text-align: center;
+}
+
 @media screen and (max-width: @mobile-break-point) {
 
 	.guides_innerContainer {
 		grid-template-columns: 1fr;
 		grid-gap: 4rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	.guideTitle, .guideDescription {
+		text-align: left;
 	}
 }

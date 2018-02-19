@@ -8,7 +8,7 @@
 			type="button" 
 			class="documentationNavigation_toggle align-items-m form-control" 
 			onclick="toggleNavigation('documentationNavigation_list')"
-		>Products <i class="push-right fas fa-angle-right" id="navigation_toggleIcon"></i>
+		><span class="flex-item ml-sm">Products</span><i class="flex-item push-right fas fa-angle-right mr-sm" id="navigation_toggleIcon"></i>
 		</button>
 
 		<ul class="documentationNavigation_list hidden-mobile" id="documentationNavigation_list">

@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="faq_answerContainer">
-    	<div class="faq_answerTitle text-center fs-3 bold mb-lg lh-5">{{ $faq->title }}</div>
+    	<div class="faq_answerTitle fs-3 bold mb-lg lh-2">{{ $faq->title }}</div>
 		<div class="faq_answerInnerContainer">
-			<div class="faq_answerBody lh-5 fs-normal">{!! $faq->body !!}</div>
+			<div class="faq_answerBody lh-4 fs-normal">{!! $faq->body !!}</div>
 		</div>
 	</div>
 	<hr>
@@ -13,7 +13,7 @@
 			<div class="faq_categoriesContainer">
 			@foreach($faqs as $key => $faqItems)
 				<div class="faq_categoriesContainerItem">
-					<div class="fs-normal bold ls-1 uppercase mb-md">
+					<div class="fs-normal bold ls-1 uppercase mb-md lh-4">
 						{{ config("faqs.categories.{$key}.title") }}
 					</div>
 					<ul class="text-gray-8">

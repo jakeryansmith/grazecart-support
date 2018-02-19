@@ -1375,16 +1375,19 @@ small,
   white-space: nowrap;
 }
 .lh-1 {
-  line-height: 1rem;
+  line-height: 1;
 }
 .lh-2 {
-  line-height: 1.25rem;
+  line-height: 1.25;
 }
 .lh-3 {
-  line-height: 1.5rem;
+  line-height: 1.5;
+}
+.lh-4 {
+  line-height: 1.75;
 }
 .lh-5 {
-  line-height: 2rem;
+  line-height: 2;
 }
 .light {
   font-weight: lighter !important;

@@ -5,11 +5,11 @@
     	<div class="guide_innerContainer">
     		<article>
     			<header class="mb-xl">
-    				<div class="guideTitle text-center fs-3 bold mb-md lh-5">
+    				<div class="guideTitle fs-3 bold mb-md lh-2">
 	    				{{ $guide->title }}
 	    			</div>
 
-		    		<div class="text-center fs-1 lh-4 text-gray-6">
+		    		<div class="guideDescription fs-1 lh-3 text-gray-6">
 		    			{{ $guide->description }}
 		    		</div>
     			</header>

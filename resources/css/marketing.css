@@ -11,6 +11,9 @@
   max-width: 600px;
   margin: 0 auto 4rem auto;
 }
+.faq_answerTitle {
+  text-align: center;
+}
 @media screen and (max-width: 900px) {
   .faq_categoriesContainer {
     display: grid;
@@ -19,6 +22,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .faq_answerTitle {
+    text-align: left;
+  }
   .faq_categoriesContainer {
     display: grid;
     grid-template-columns: 1fr;
@@ -124,10 +130,20 @@
           box-shadow: 0 7px 6px -6px rgba(50, 50, 93, 0.2);
   border-radius: 0.25rem;
 }
+.guideTitle,
+.guideDescription {
+  text-align: center;
+}
 @media screen and (max-width: 900px) {
   .guides_innerContainer {
     grid-template-columns: 1fr;
     grid-gap: 4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .guideTitle,
+  .guideDescription {
+    text-align: left;
   }
 }
 .logo {
@@ -348,7 +364,7 @@
 .article_header {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   letter-spacing: 0.15rem;
-  line-height: 2.5rem;
+  line-height: 1.25;
   font-size: 2rem;
 }
 .article_section {
@@ -357,9 +373,7 @@
   margin: 0 auto 2rem auto;
 }
 .article_sectionHeader {
-  line-height: 1.5rem;
-  color: #3d3d3d;
-  padding-bottom: 0.5rem;
+  line-height: 1;
   border-bottom: solid 1px #f5f8f9;
   padding: 1rem 1.25rem;
   letter-spacing: 0.05rem;
@@ -387,7 +401,7 @@
   max-width: 100%;
 }
 .article_container p {
-  line-height: 1.75rem;
+  line-height: 1.75;
   margin: 1rem 0 2rem 0;
 }
 .article_container p:last-of-type {
@@ -418,7 +432,6 @@
 @media screen and (max-width: 900px) {
   .article_header {
     text-transform: uppercase;
-    line-height: 2rem;
     font-size: 1.5rem !important;
   }
   .article_innerContainer {
@@ -461,6 +474,13 @@
   width: 100%;
   display: none;
   margin: 0 0 2rem 0;
+  height: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 900px) {
   .documentationNavigation_list {
