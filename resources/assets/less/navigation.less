@@ -1,9 +1,10 @@
 .documentationNavigation_container {
-	flex: 1 0 auto;
+	padding: 4rem 0 4rem 2rem;
 }
 
 .documentationNavigation_list {
-	width: 275px;
+	width: 225px;
+	margin-left: auto;
 }
 
 .documentationNavigation_listItem {
@@ -25,7 +26,7 @@
 .documentationNavigation_toggle {
 	width: 100%;
 	display: none;
-	margin: 0 0 2rem 0;
+	margin: 0;
 	height: 46px;
 	display: none;
 	align-items: center;
@@ -33,12 +34,17 @@
 
 @media screen and (max-width: @mobile-break-point) {
 
-	.documentationNavigation_list {
-		width: 275px;
-		margin-bottom: 4rem; 
-	}
-
 	.documentationNavigation_toggle {
 		display: flex;
+	}
+
+	.documentationNavigation_container {
+		padding: 2rem;
+	}
+
+	.documentationNavigation_list {
+		width: 100%;
+		margin: 2rem 0;
+		padding: 0;
 	}
 }	

@@ -31,7 +31,7 @@
 
 <div class="main">
     @yield('page_header')
-    <div class="main_container">
+    <div class="main_container {{ $layout ?? 'main_container--default' }}">
         @yield('content')
     </div>
     @yield('page_footer')
