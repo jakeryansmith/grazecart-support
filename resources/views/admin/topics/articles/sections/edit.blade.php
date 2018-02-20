@@ -21,7 +21,7 @@
 	@endif
 	<div class="row">
 		<div class="content">
-			<form action="/admin/topics/{{ $topic->id }}/articles/{{ $article->id }}/sections/{{ $section->id }}" method="POST">
+			<form action="/admin/topics/{{ $topic->id }}/articles/{{ $article->id }}/sections/{{ $section->id }}" method="POST" id="contentForm">
 				{!! csrf_field() !!}
 				{!! method_field('PUT') !!}
 				<div class="panel">
@@ -43,13 +43,6 @@
 		                <div class="form-group">
 							<label>Description</label>
 							<input type="text" name="description" class="form-control" placeholder="A short description for search results" value="{{ $section->description }}">
-						</div>
-						<div class="form-group text-right">
-							<button 
-								type="button" 
-								class="btn btn-sm btn-alt" 
-								onclick="eventHub.$emit('toggleMediaBrowser')"
-							><i class="fa fa-photo"></i> Add Image</button>
 						</div>
 						<div class="form-group">
 							<textarea 

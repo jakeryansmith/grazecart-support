@@ -53,9 +53,30 @@
             }
         }
     }
+    $.Redactor.prototype.saveIt = function()
+    {
+        return {
+            init: function ()
+            {
+                var button = this.button.add('saveIt', 'Save');
+                this.button.addCallback(button, function(name) {
+                    var html = $('#body_content').redactor('code.get');
+                    document.getElementById('contentForm').submit();
+
+                    let form = document.getElementById('contentForm');
+                    let hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'textarea');
+                    hiddenInput.setAttribute('name', 'body');
+                    hiddenInput.setAttribute('value', html);
+                    form.appendChild(hiddenInput);
+                    form.submit();
+                });
+            }
+        }
+    }
     $('#body_content').redactor({
         buttons: ['format', 'bold', 'italic', 'image', 'ol', 'ul'],
-        plugins: ['alignment','source','fullscreen','imagePlus'],
+        plugins: ['alignment','source','imagePlus','fullscreen','saveIt'],
         formatting: ['p','h3','h4'],
         stylesClass: 'my-own-class',
         script: false,

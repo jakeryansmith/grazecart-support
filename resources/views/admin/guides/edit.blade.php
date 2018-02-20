@@ -22,7 +22,7 @@
 	@if(request()->get('tab', 'content') == 'content')
 	<div class="panel">
 		<div class="panel-body">
-			<form action="/admin/guides/{{ $guide->id }}" method="POST">
+			<form action="/admin/guides/{{ $guide->id }}" method="POST" id="contentForm">
 				{!! csrf_field() !!}
 	    		{!! method_field('PUT') !!}
 	    		<div class="form-group">
@@ -49,11 +49,6 @@
                 </div>
 				@if($guide->draft)
 					<div class="label label-light mb-sm">Draft</div>
-					<button 
-						type="button" 
-						class="btn btn-sm btn-alt" 
-						onclick="eventHub.$emit('toggleMediaBrowser')"
-					><i class="fa fa-photo"></i> Add Image</button>
 					<div class="form-group">
 						<textarea 
 							name="draft_body" 
