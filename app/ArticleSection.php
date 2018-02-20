@@ -49,7 +49,8 @@ class ArticleSection extends Model
 
     public function markdown()
     {
-        return (new HtmlConverter())->convert($this->body);
+//        return (new HtmlConverter())->convert($this->body);
+        return $this->body;
     }
 
     public function article()

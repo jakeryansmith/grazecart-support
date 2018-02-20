@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Parsers\VideoParser;
 use Illuminate\Support\ServiceProvider;
+use League\CommonMark\Environment;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
     }
 
     /**

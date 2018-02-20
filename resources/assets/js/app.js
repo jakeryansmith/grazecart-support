@@ -66,5 +66,7 @@ const app = new Vue({
         }.bind(this));
 
         window.eventHub.$on('showModal', this.showModal);
+
+        window.eventHub.$on('foo', function(){alert('OK!')});
     },
 });

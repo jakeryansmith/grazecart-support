@@ -33,7 +33,7 @@ class TopicArticleSectionController extends Controller
             'description' => $request->get('description'),
             'url' => $request->get('url'),
             'keywords' => $request->get('keywords'),
-            'body' => Markdown::convertToHtml($request->get('body')),
+            'body' => $request->get('body'),
             'visible' => $request->get('visible', false)
         ]);
 

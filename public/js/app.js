@@ -4483,11 +4483,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 		select: function select(photo) {
 
-			this.$emit('insertPhoto', photo);
-
-			if (this.id) {
-				return this.InsertCodeInTextArea(photo);
-			}
+			var redactor = $('#body_content').redactor('core.object');
+			redactor.insert.html('<img src="' + photo.path + '" alt="' + photo.title + '">');
 
 			this.toggle();
 		},
@@ -37277,6 +37274,10 @@ var app = new Vue({
         }.bind(this));
 
         window.eventHub.$on('showModal', this.showModal);
+
+        window.eventHub.$on('foo', function () {
+            alert('OK!');
+        });
     }
 });
 

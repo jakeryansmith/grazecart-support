@@ -43,14 +43,14 @@ class GuidesController extends Controller
 
         if($guide->draft && $request->filled('draft_body'))
         {
-            $guide->draft_body = Markdown::convertToHtml($request->input('draft_body'));
+            $guide->draft_body =$request->input('draft_body');
             $guide->save();
             return back();
         }
 
         if(!$guide->draft && $request->filled('body'))
         {
-            $guide->body = Markdown::convertToHtml($request->input('body'));
+            $guide->body = $request->input('body');
             $guide->save();
             return back();
         }

@@ -364,7 +364,8 @@
 .article_header {
   letter-spacing: 0.1rem;
   line-height: 1.25;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-transform: capitalize;
 }
 .article_section {
   margin: 0 auto 4rem auto;
@@ -377,6 +378,7 @@
 .article_sectionHeader {
   padding: 0;
   letter-spacing: 0.05rem;
+  font-size: 2rem;
 }
 .article_sectionBody {
   padding: 0;
@@ -393,33 +395,57 @@
 .article_innerContainer {
   max-width: 776px;
 }
-.article_sectionBody p {
+.redactor-box-fullscreen > .redactor-editor {
+  max-width: 776px;
+  margin: 0 auto;
+}
+.article_sectionBody h3,
+.redactor-editor h3 {
+  line-height: 1.25;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.article_sectionBody h4,
+.redactor-editor h4 {
+  line-height: 1.25;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+.article_sectionBody p,
+.redactor-editor p {
   line-height: 1.75;
   margin: 0.5rem 0 2rem 0;
 }
-.article_sectionBody p:last-of-type {
-  margin-bottom: 0;
-}
-.article_sectionBody img {
+.article_sectionBody img,
+.redactor-editor img {
   display: block;
   max-width: 100%;
 }
 .article_sectionBody ul,
-.article_sectionBody ol {
-  margin: 2rem 0 2rem 1.25rem;
+.redactor-editor ul,
+.article_sectionBody ol,
+.redactor-editor ol {
+  margin: 0.5rem 0 0.5rem 1.25rem;
 }
 .article_sectionBody ul li,
-.article_sectionBody ol li {
+.redactor-editor ul li,
+.article_sectionBody ol li,
+.redactor-editor ol li {
   line-height: 1.5;
   margin-bottom: 1rem;
 }
-.article_sectionBody ul {
+.article_sectionBody ul,
+.redactor-editor ul {
   list-style-type: disc;
 }
-.article_sectionBody ol {
+.article_sectionBody ol,
+.redactor-editor ol {
   list-style-type: decimal;
 }
-.article_sectionBody em {
+.article_sectionBody em,
+.redactor-editor em {
   display: block;
   background-color: #f5f8f9;
   border-left: solid 4px #34b292;

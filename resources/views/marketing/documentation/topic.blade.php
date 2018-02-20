@@ -77,7 +77,7 @@
 				@foreach($article->sections as $section)
 					<div class="article_section">
 						<a class="anchor" id="{{ $section->slug }}"></a>
-						<div class="article_sectionHeader lh-3 fs-2 bold">
+						<div class="article_sectionHeader lh-3 bold">
 							{{ $section->title }}
 						</div>
 						<div class="article_sectionBody">

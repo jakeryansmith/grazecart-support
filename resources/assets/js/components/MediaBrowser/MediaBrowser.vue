@@ -185,11 +185,8 @@
 	        select: function(photo)
 	        {
 
-	        	this.$emit('insertPhoto', photo);
-
-	        	if(this.id) {
-	        		return this.InsertCodeInTextArea(photo);
-	        	}
+	        	var redactor = $('#body_content').redactor('core.object');
+	        	redactor.insert.html('<img src="'+photo.path+'" alt="'+photo.title+'">');
 
 	        	this.toggle();
 	        },

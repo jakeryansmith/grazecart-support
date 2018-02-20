@@ -47,6 +47,7 @@ class Guide extends Model
 
     public function markdown($field = 'body')
     {
-        return (new HtmlConverter())->convert($this->{$field});
+//        return (new HtmlConverter())->convert($this->{$field});
+        return $this->{$field};
     }
 }
