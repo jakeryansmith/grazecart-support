@@ -15,7 +15,7 @@ class DocumentationController extends Controller
     }
 
     public function showTopic($topicSlug) {
-        $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->get();
+        $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->orderBy('sort_order')->get();
         $topic = Topic::whereSlug($topicSlug)->firstOrFail();
         $articles = Article::where('topic_id', $topic->id)
             ->where('visible', true)
@@ -37,7 +37,7 @@ class DocumentationController extends Controller
     }
 
     public function showArticle($topicSlug, $articleSlug) {
-        $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->get();
+        $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->orderBy('sort_order')->get();
         $topic = Topic::whereSlug($topicSlug)->firstOrFail();
         $articles = Article::where('topic_id', $topic->id)
             ->where('visible', true)
