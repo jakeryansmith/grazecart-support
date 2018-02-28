@@ -53,7 +53,7 @@
                     <li><a href="https://grazecart.com/contact">Contact Us</a></li>
                     <li><a href="{{ url('/faqs') }}">FAQ</a></li>
                     <li><a href="{{ url('/guides') }}">Guides</a></li>
-                    <li><a href="https://www.facebook.com/grazecart/">Discussion</a></li>
+                    <li><a href="https://www.facebook.com/groups/grazecartForum/">Discussion</a></li>
                 </ul>    
             </div>
 

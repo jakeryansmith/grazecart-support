@@ -62,7 +62,7 @@
 				</div>
 			</a>
 
-			<a href="https://www.facebook.com/grazecart/" class="helpIndex_card pa-lg shadow-soft">
+			<a href="https://www.facebook.com/groups/grazecartForum/" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
 						<i class="far fa-comments"></i>
