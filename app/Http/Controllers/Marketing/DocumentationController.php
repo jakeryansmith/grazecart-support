@@ -10,10 +10,22 @@ use TheSeer\Tokenizer\Token;
 
 class DocumentationController extends Controller
 {
+    /**
+     * Show all documentation topics.
+     *
+     * @return mixed
+     */
     public function index() {
-        return view('marketing.documentation.index')->withTopics(Topic::all());
+        return view('marketing.documentation.index')
+            ->withTopics(Topic::where('visible')->orderBy('sort_order')->get());
     }
 
+    /**
+     * Show individual topic.
+     *
+     * @param $topicSlug
+     * @return mixed
+     */
     public function showTopic($topicSlug) {
         $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->orderBy('sort_order')->get();
         $topic = Topic::whereSlug($topicSlug)->firstOrFail();
@@ -36,6 +48,13 @@ class DocumentationController extends Controller
             ->withTopic($topic);
     }
 
+    /**
+     * Show individual article.
+     *
+     * @param $topicSlug
+     * @param $articleSlug
+     * @return mixed
+     */
     public function showArticle($topicSlug, $articleSlug) {
         $topics = Topic::select(['id','title','slug','icon'])->where('visible', true)->orderBy('sort_order')->get();
         $topic = Topic::whereSlug($topicSlug)->firstOrFail();
