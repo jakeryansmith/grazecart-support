@@ -17,7 +17,7 @@ class DocumentationController extends Controller
      */
     public function index() {
         return view('marketing.documentation.index')
-            ->withTopics(Topic::where('visible')->orderBy('sort_order')->get());
+            ->withTopics(Topic::where('visible', true)->orderBy('sort_order')->get());
     }
 
     /**
