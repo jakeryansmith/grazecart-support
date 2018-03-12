@@ -22,7 +22,7 @@
 					<div class="align-items-t">
 						<div class="flex-item">
 							<div class="text-gray fs-2 bold mb-xs lh-2">
-								{{ $guide->title }}!
+								{{ $guide->title }}
 							</div>
 							<div class="fs-1 text-gray-5 mb-md lh-3">
 								{{ $guide->description }}
