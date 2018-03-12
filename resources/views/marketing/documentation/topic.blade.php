@@ -4,7 +4,7 @@
 	])
 
 @section('content')
-<div class="documentation_container">
+{{-- <div class="documentation_container"> --}}
 	<div class="documentation_innerContainer">
 
 		<div class="documentationNavigation_container">
@@ -89,5 +89,5 @@
 		</div>
 
 	</div>
-</div>	
+{{-- </div>	 --}}
 @stop

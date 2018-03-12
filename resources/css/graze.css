@@ -2882,7 +2882,7 @@ a.list-group-item:hover {
 .panel-open::after {
   content: '';
   position: fixed;
-  z-index: 1040;
+  z-index: 1049;
   top: 0;
   left: 0;
   width: 100%;
@@ -2894,7 +2894,7 @@ a.list-group-item:hover {
 }
 .gc-modal-mask {
   position: fixed;
-  z-index: 1050;
+  z-index: 1060;
   top: 0;
   left: 0;
   width: 100%;
@@ -2908,7 +2908,7 @@ a.list-group-item:hover {
   height: 100%;
   display: block;
   overflow: auto;
-  z-index: 1051;
+  z-index: 1061;
   padding: 0.5rem;
   -webkit-overflow-scrolling: touch;
 }
@@ -2999,7 +2999,7 @@ a.list-group-item:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1050;
+  z-index: 1060;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
@@ -3164,7 +3164,7 @@ a.list-group-item:hover {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.95);
-  z-index: 1060;
+  z-index: 1070;
   border-top: solid 6px #34b292;
   -webkit-box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
           box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
@@ -3559,7 +3559,7 @@ button.close {
 }
 /* Padding */
 .pa-0 {
-  padding: 0;
+  padding: 0 0 !important;
 }
 .pa-xs {
   padding: 0.25rem;
@@ -4814,7 +4814,7 @@ button.close {
  * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
  */
 .pika-single {
-  z-index: 1050;
+  z-index: 1060;
   display: block;
   position: relative;
   color: #636968;
@@ -4859,7 +4859,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   display: inline-block;
   *display: inline;
   position: relative;
-  z-index: 1050;
+  z-index: 1060;
   overflow: hidden;
   margin: 0;
   padding: 5px 3px;
@@ -4870,7 +4870,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-title select {
   cursor: pointer;
   position: absolute;
-  z-index: 1049;
+  z-index: 1059;
   margin: 0;
   left: 0;
   top: 5px;

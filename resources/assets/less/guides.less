@@ -12,22 +12,55 @@
 }
 
 .guide_content {
-	line-height: 1.75;
-	h2 {
+	h3 {
+		line-height: 1.25;
+		margin: 0.5rem 0 0 0;
 		font-size: 1.25rem;
 		font-weight: bolder;
-		margin: 4rem 0 2rem 0;
-		color: hsl(165, 3%, 30%);
+	}
+	h4 {
+		line-height: 1.25;
+		margin: 0.5rem 0 0 0;
+		font-size: 1rem;
+		font-weight: bolder;
 	}
 	p {
-		margin-bottom: 2rem;
+		line-height: 1.75;
+		margin: 0.5rem 0 2rem 0;
 	}
 	img {
 		display: block;
 		max-width: 100%;
-		margin: 0.5rem auto;
-		box-shadow: 0 7px 6px -6px rgba(50,50,93,.2);
-		border-radius: 0.25rem;
+	}
+	ul, ol {
+		margin: 0.5rem 0 0.5rem 1.25rem;
+		li {
+			line-height: 1.5;
+			margin-bottom: 1rem;
+		}
+	}
+	ul {
+		list-style-type: disc;
+	}
+	ol {
+		list-style-type: decimal;
+	}
+	em {
+		display: block;
+		background-color: #f5f8f9;
+		border-left: solid 4px hsl(165, 55%, 45%);
+		font-style: normal;
+		display: flex;
+		align-items: center;
+		padding: 0.5rem 1rem;
+		font-size: 0.85rem;
+	}
+	hr {
+		padding: 0;
+		margin: 0;
+		background-color: transparent;
+		border: none;
+		height: 2rem;
 	}
 }
 

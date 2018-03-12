@@ -26,6 +26,10 @@
 @import "navigation";
 @import "search-input";
 
+html, body {
+	height: 100%;
+}
+
 body {
 	padding-top: 76px;
 }
@@ -108,21 +112,24 @@ a.anchor {
 .main_container {
 	padding: 4rem 2rem;
 	flex: 1 0 auto;
+	height: 100%;
 }
 
 .main_container--docs {
 	padding: 0;
+	height: 100%;
 }
 
-
 .documentation_container {
-
+	// height: 100% !important;
 }
 
 .documentation_innerContainer {
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	grid-gap: 2rem;
+	height: 100%;
+	justify-items: stretch;
 }
 
 .show-mobile {

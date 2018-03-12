@@ -110,25 +110,61 @@
   max-width: 600px;
   margin: 0 auto;
 }
-.guide_content {
-  line-height: 1.75;
-}
-.guide_content h2 {
+.guide_content h3 {
+  line-height: 1.25;
+  margin: 0.5rem 0 0 0;
   font-size: 1.25rem;
   font-weight: bolder;
-  margin: 4rem 0 2rem 0;
-  color: #4a4f4e;
+}
+.guide_content h4 {
+  line-height: 1.25;
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: bolder;
 }
 .guide_content p {
-  margin-bottom: 2rem;
+  line-height: 1.75;
+  margin: 0.5rem 0 2rem 0;
 }
 .guide_content img {
   display: block;
   max-width: 100%;
-  margin: 0.5rem auto;
-  -webkit-box-shadow: 0 7px 6px -6px rgba(50, 50, 93, 0.2);
-          box-shadow: 0 7px 6px -6px rgba(50, 50, 93, 0.2);
-  border-radius: 0.25rem;
+}
+.guide_content ul,
+.guide_content ol {
+  margin: 0.5rem 0 0.5rem 1.25rem;
+}
+.guide_content ul li,
+.guide_content ol li {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.guide_content ul {
+  list-style-type: disc;
+}
+.guide_content ol {
+  list-style-type: decimal;
+}
+.guide_content em {
+  display: block;
+  background-color: #f5f8f9;
+  border-left: solid 4px #34b292;
+  font-style: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+.guide_content hr {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  height: 2rem;
 }
 .guideTitle,
 .guideDescription {
@@ -389,6 +425,7 @@
 .article_container {
   width: 100%;
   max-width: 100%;
+  height: 100%;
   background-color: #FFF;
   padding: 4rem 2rem 4rem 4rem;
 }
@@ -669,6 +706,10 @@
     padding-left: 1rem;
   }
 }
+html,
+body {
+  height: 100%;
+}
 body {
   padding-top: 76px;
 }
@@ -743,14 +784,18 @@ a.anchor {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  height: 100%;
 }
 .main_container--docs {
   padding: 0;
+  height: 100%;
 }
 .documentation_innerContainer {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-gap: 2rem;
+  height: 100%;
+  justify-items: stretch;
 }
 .show-mobile {
   display: none;
