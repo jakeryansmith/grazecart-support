@@ -33,7 +33,7 @@
 			<a href="/faqs" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="far fa-question-circle"></i>
+						<i class="fa fa-question-circle"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -65,7 +65,7 @@
 			<a href="https://www.facebook.com/groups/grazecartForum/" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="far fa-comments"></i>
+						<i class="fa fa-comments"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -81,7 +81,7 @@
 			<a href="https://grazecart.com/contact" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="far fa-envelope-open"></i>
+						<i class="fa fa-envelope-open"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -120,7 +120,7 @@
 							Stock Photos
 						</div>
 						<div class="lh-3 fs-1 text-gray-5">
-							Professional stock photography for farms
+							Professional stock photography for your store
 						</div>
 					</div>
 				</div>
