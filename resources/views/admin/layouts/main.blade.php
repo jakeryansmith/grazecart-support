@@ -45,42 +45,7 @@
 <script src="/redactor/fullscreen.min.js"></script>
 <script src="/redactor/photo_manager.js"></script>
 <script src="/redactor/table.min.js"></script>
-<script src="{{ mix('/js/app.js') }}"></script>
-<script>
-    // $.Redactor.prototype.imagePlus = function()
-    // {
-    //     return {
-    //         init: function ()
-    //         {
-    //             var button = this.button.add('imagePlus', 'Image');
-    //             this.button.addCallback(button, function() {
-    //                 window.eventHub.$emit('toggleMediaBrowser');
-    //             });
-    //         }
-    //     }
-    // }
-    // $.Redactor.prototype.saveIt = function()
-    // {
-    //     return {
-    //         init: function ()
-    //         {
-    //             var button = this.button.add('saveIt', 'Save');
-    //             this.button.addCallback(button, function(name) {
-    //                 var html = $('#body_content').redactor('code.get');
-    //                 document.getElementById('contentForm').submit();
-
-    //                 let form = document.getElementById('contentForm');
-    //                 let hiddenInput = document.createElement('input');
-    //                 hiddenInput.setAttribute('type', 'textarea');
-    //                 hiddenInput.setAttribute('name', 'body');
-    //                 hiddenInput.setAttribute('value', html);
-    //                 form.appendChild(hiddenInput);
-    //                 form.submit();
-    //             });
-    //         }
-    //     }
-    // }
-</script>    
+<script src="{{ mix('/js/app.js') }}"></script>   
 @yield('scripts')
 </body>
 </html>

@@ -57,7 +57,7 @@ class GuidesController extends Controller
 
         if(!$guide->draft && $request->filled('body'))
         {
-            $guide->body = $request->input('body');
+            $guide->body = str_replace('<p></p>','<hr>', $request->get('body'));
             $guide->save();
 
             if($request->ajax())
