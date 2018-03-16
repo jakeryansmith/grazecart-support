@@ -150,7 +150,7 @@
 
     $('#body_content').redactor({
         buttons: ['format', 'bold', 'italic', 'image', 'ol', 'ul', 'link', 'html'],
-        plugins: ['alignment','fullscreen','photo_manager','save'],
+        plugins: ['alignment','fullscreen','table','photo_manager','save'],
         formatting: ['p','h2','h3','h4'],
         formattingAdd: {
             "call-out": {

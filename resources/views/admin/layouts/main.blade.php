@@ -44,6 +44,7 @@
 <script src="/redactor/redactor.min.js"></script>
 <script src="/redactor/fullscreen.min.js"></script>
 <script src="/redactor/photo_manager.js"></script>
+<script src="/redactor/table.min.js"></script>
 <script src="{{ mix('/js/app.js') }}"></script>
 <script>
     // $.Redactor.prototype.imagePlus = function()
