@@ -18,14 +18,6 @@ mix.js('resources/assets/js/marketing.js', 'js');
 
 mix.less('resources/assets/less/marketing.less', '../resources/css');
 
-mix.scripts([	
-        "resources/assets/js/vendor/redactor/redactor.min.js",
-        "resources/assets/js/vendor/redactor/alignment.js",
-        "resources/assets/js/vendor/redactor/fullscreen.js",
-        "resources/assets/js/vendor/redactor/source.js",
-        "resources/assets/js/vendor/redactor/table.js",
-        "resources/assets/js/vendor/redactor/bootstrap-redactor.js",
-    ], 'public/js/vendor.js');
 
 mix.styles(
 	[

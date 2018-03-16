@@ -1,5 +1,5 @@
 @site-width: 1000px;
-@site-width-narrow: 775px;
+@site-width-narrow: 800px;
 @footer-height: 100px;
 @mobile-break-point: 900px;
 
@@ -32,7 +32,15 @@ html, body {
 
 body {
 	padding-top: 76px;
+}
+
+.redactor-toolbar {
+	text-align: center;
+}
+
+.redactor-box-fullscreen {
 	background-color: #FFF;
+	padding: @spacing-large;
 }
 
 .supportPeople_container {
@@ -116,7 +124,7 @@ a.anchor {
 	height: 100%;
 }
 
-.main_container--docs {
+.main_container--docs, .main_container--guide {
 	padding: 0;
 	height: 100%;
 }

@@ -185,8 +185,9 @@
 	        select: function(photo)
 	        {
 
-	        	var redactor = $('#body_content').redactor('core.object');
-	        	redactor.insert.html('<img src="'+photo.path+'" alt="'+photo.title+'">');
+	        	var redactor = $R('#body_content');
+	        	redactor.insertion.insertHtml('<img src="'+photo.path+'" alt="'+photo.title+'">');
+	        	// redactor.insert.html('<img src="'+photo.path+'" alt="'+photo.title+'">');
 
 	        	this.toggle();
 	        },

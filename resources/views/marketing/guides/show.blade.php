@@ -1,18 +1,20 @@
-@extends('marketing.layout', ['pageTitle' => $guide->title])
+@extends('marketing.layout', ['pageTitle' => $guide->title, 'layout' => 'main_container--guide'])
+
+@section('page_header')
+	<div class="pageHeader_container">
+		<div class="pageHeader_innerContainer flex align-items-m">
+			<div class="flex-item-fill text-center">
+				<div class="fs-4 bold lh-2 mb-sm">{{ $guide->title }}</div>
+				<div class="fs-normal text-primary-9 lh-3 ml-xs">{{ $guide->description }}</div>
+			</div>	
+		</div>
+	</div>	
+@stop
 
 @section('content')
     <div class="guide_container">
     	<div class="guide_innerContainer">
     		<article>
-    			<header class="mb-xl">
-    				<div class="guideTitle fs-3 bold mb-md lh-2">
-	    				{{ $guide->title }}
-	    			</div>
-
-		    		<div class="guideDescription fs-1 lh-3 text-gray-6">
-		    			{{ $guide->description }}
-		    		</div>
-    			</header>
     			<div class="guide_content">
 					@if($guide->draft && auth()->check())
 						{!! $guide->draft_body !!}

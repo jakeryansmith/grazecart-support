@@ -42,11 +42,19 @@
 }
 
 .redactor-box-fullscreen > .redactor-editor {
-	max-width: 776px;
+	max-width: @site-width-narrow;
 	margin: 0 auto;
+	background-color: #f5f8f9 !important;
 }
 
-.article_sectionBody, .redactor-editor {
+.redactor-body-fullscreen .redactor-in {
+	width: 700px;
+	margin: 0 auto;
+	padding: 2rem;
+	border: solid 1px #f5f8f9;
+}
+
+.article_sectionBody, .redactor-in {
 	h3 {
 		line-height: 1.25;
 		margin: 0.5rem 0 0 0;
@@ -63,9 +71,15 @@
 		line-height: 1.75;
 		margin: 0.5rem 0 2rem 0;
 	}
+	figure {
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
 	img {
 		display: block;
 		max-width: 100%;
+		margin: 1rem 0;
 	}
 	ul, ol {
 		margin: 0.5rem 0 0.5rem 1.25rem;
@@ -79,16 +93,6 @@
 	}
 	ol {
 		list-style-type: decimal;
-	}
-	em {
-		display: block;
-		background-color: #f5f8f9;
-		border-left: solid 4px hsl(165, 55%, 45%);
-		font-style: normal;
-		display: flex;
-		align-items: center;
-		padding: 0.5rem 1rem;
-		font-size: 0.85rem;
 	}
 	hr {
 		padding: 0;
@@ -114,6 +118,70 @@
 	      	padding: 0 0 0 0.2rem;
 	    }
 	}
+}
+
+.call-out {
+	display: block;
+	background-color: #f5f8f9;
+	background-color: hsl(165, 55%, 45%);
+	color: #FFF;
+	font-style: normal;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	font-size: 0.85rem;
+	position: relative;
+	padding-left: 3rem;
+	border-radius: 3px;
+	box-shadow: 0 7px 6px -6px rgba(50,50,93,.1);
+	&:before {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "Font Awesome 5 Free";
+		font-size: 1rem;
+		color: #FFF;
+		background-color: hsl(165, 55%, 45%);
+	    content: "\f0eb";
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    padding-left: 1rem;
+	    border-radius: 3px 0 0 3px;
+	  }
+}
+
+.call-out--alert {
+	display: block;
+	background-color: hsl(360, 65%, 64%);
+	color: #FFF;
+	font-style: normal;
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	font-size: 0.85rem;
+	position: relative;
+	padding-left: 3rem;
+	border-radius: 3px;
+	box-shadow: 0 7px 6px -6px rgba(50,50,93,.1);
+	&:before {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: "Font Awesome 5 Free";
+		font-size: 1rem;
+		color: #FFF;
+		background-color: hsl(360, 65%, 64%);
+	    content: "\f071";
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 3rem;
+	    padding: 0;
+	    border-radius: 3px 0 0 3px;
+	  }
 }
 
 @media screen and (max-width: @mobile-break-point) {

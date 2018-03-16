@@ -37,6 +37,7 @@ class GuidesController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request, $guideId) {
+
         $guide = tap(Guide::findOrFail($guideId))->update($request->only([
             'title', 'visible', 'keywords', 'cover_photo', 'description', 'draft'
         ]));
@@ -45,6 +46,12 @@ class GuidesController extends Controller
         {
             $guide->draft_body =$request->input('draft_body');
             $guide->save();
+
+            if($request->ajax())
+            {
+                return response()->json('Saved.');
+            }
+
             return back();
         }
 
@@ -52,9 +59,14 @@ class GuidesController extends Controller
         {
             $guide->body = $request->input('body');
             $guide->save();
+
+            if($request->ajax())
+            {
+                return response()->json('Saved.');
+            }
+
             return back();
         }
-
         return back();
     }
 }

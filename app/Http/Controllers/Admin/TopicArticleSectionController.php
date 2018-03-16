@@ -28,14 +28,10 @@ class TopicArticleSectionController extends Controller
             'visible' => 'boolean'
         ]);
 
-        ArticleSection::findOrFail($section)->update([
-            'title' => $request->get('title'),
-            'description' => $request->get('description'),
-            'url' => $request->get('url'),
-            'keywords' => $request->get('keywords'),
-            'body' => str_replace('<p><br></p>','<hr>', $request->get('body')),
-            'visible' => $request->get('visible', false)
-        ]);
+        $request['body'] = str_replace('<p><br></p>','<hr>', $request->get('body'));
+        ArticleSection::findOrFail($section)->update($request->only([
+            'title','description','url','keywords','body','visible'
+        ]));
 
         return back();
     }

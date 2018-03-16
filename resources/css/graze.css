@@ -822,6 +822,28 @@ template {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+input.switch {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  position: relative;
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset -20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+          box-shadow: inset -20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+  background-color: #df6868;
+  border: 1px solid #df6868;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+input.switch:checked {
+  background-color: #34b292;
+  -webkit-box-shadow: inset 20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+          box-shadow: inset 20px 0px 0px 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid #34b292;
+}
 .section {
   border-radius: 0.25rem;
   border: 1px solid #e5e6e6;
@@ -1397,6 +1419,22 @@ small,
 }
 .normal {
   font-weight: normal !important;
+}
+.numberBullet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 html,
 body {
@@ -2891,6 +2929,41 @@ a.list-group-item:hover {
   opacity: 1;
   -webkit-animation: fadein 0.2s ease-in-out 1;
           animation: fadein 0.2s ease-in-out 1;
+}
+.wizard__container {
+  margin: 0 1rem;
+  padding: 0 0 2rem 0;
+  border-bottom: solid 1px #e5e6e6;
+}
+.wizard__innerContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.wizzard__instructionsContainer {
+  min-width: 400px;
+}
+.wizard__controlsContainer {
+  background-color: #FFF;
+  padding: 1rem;
+  -webkit-box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+          box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07);
+}
+@media (max-width: 900px) {
+  .wizard__innerContainer {
+    display: block;
+  }
+  .wizzard__instructionsContainer {
+    min-width: 100%;
+  }
+  .wizard__controlsContainer {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 .gc-modal-mask {
   position: fixed;

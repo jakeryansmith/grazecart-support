@@ -4,7 +4,7 @@
 	<div class="pageHeader_container pageHeader_container--gears">
 		<div class="pageHeader_innerContainer flex align-items-m">
 			<div class="flex-item fs-6 mr-lg text-primary-3">
-				<i class="far fa-question-circle"></i>
+				<i class="fa fa-question-circle"></i>
 			</div>
 			<div class="flex-item">
 				<div class="fs-5 bold lh-2">FAQ</div>
