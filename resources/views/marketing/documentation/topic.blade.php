@@ -12,7 +12,7 @@
 				type="button" 
 				class="documentationNavigation_toggle align-items-m form-control" 
 				onclick="toggleNavigation('documentationNavigation_list')"
-			><span class="flex-item ml-sm">{{ $topic->title }}</span><i class="flex-item push-right fas fa-angle-right mr-sm" id="navigation_toggleIcon"></i>
+			><span class="flex-item ml-sm">{!! $topic->icon ?? '' !!} {{ $topic->title }}</span><i class="flex-item push-right fas fa-angle-right mr-sm" id="navigation_toggleIcon"></i>
 			</button>
 
 			<ul class="documentationNavigation_list hidden-mobile" id="documentationNavigation_list">
