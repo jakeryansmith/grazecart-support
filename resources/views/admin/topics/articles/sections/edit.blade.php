@@ -102,12 +102,17 @@
             toggle: function()
             {
                 let content = this.app.source.getCode();
+                window.eventHub.$emit('showProgressBar');
                 $.ajax({
                     url: '/admin/topics/{{ $topic->id }}/articles/{{ $article->id }}/sections/{{ $section->id }}',
                     type: 'put',
                     data: {
                         "_token": "{{ csrf_token() }}",
                         'body': content
+                    },
+                    success: function(data)
+                    {
+                        window.eventHub.$emit('hideProgressBar');
                     }
                 });
             }

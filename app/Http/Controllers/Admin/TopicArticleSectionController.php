@@ -58,6 +58,11 @@ class TopicArticleSectionController extends Controller
             $articleSection->save();
         }
 
+        if($request->ajax())
+        {
+            return response()->json('Article section saved');
+        }
+
         return back();
     }
 }
