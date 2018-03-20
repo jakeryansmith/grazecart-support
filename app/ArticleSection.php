@@ -3,9 +3,8 @@
 namespace App;
 
 use Laravel\Scout\Searchable;
-use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use League\HTMLToMarkdown\HtmlConverter;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class ArticleSection extends Model
 {
@@ -49,10 +48,14 @@ class ArticleSection extends Model
 
     public function markdown()
     {
-//        return (new HtmlConverter())->convert($this->body);
         return $this->body;
     }
 
+    /**
+     * Return the article the section belongs to.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
     public function article()
     {
         return $this->belongsTo('App/Article');

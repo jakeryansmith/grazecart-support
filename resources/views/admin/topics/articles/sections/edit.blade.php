@@ -49,7 +49,6 @@
 								name="body" 
 								class="form-control" 
 								rows="10" 
-								placeholder="Use markdown to style text." 
 								id="body_content"
 							>{{ $section->markdown() }}</textarea>
 						</div>
@@ -57,6 +56,10 @@
 							<label>Keywords</label>
 							<input type="text" name="keywords" class="form-control" placeholder="Seperate keywords with commas" value="{{ $section->keywords }}">
 						</div>
+                        <div class="form-group">
+                            <label>Slug</label>
+                            <input type="text" name="slug" class="form-control" value="{{ $section->slug }}">
+                        </div>
 						<div class="form-group">
 							<label>URL</label>
 							<input type="text" name="url" class="form-control" value="{{ $section->url }}">

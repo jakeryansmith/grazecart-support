@@ -20,7 +20,7 @@
 			@foreach($topics as $topic)
 				<a href="{{ url('/docs/topic/'.$topic->slug) }}" class="topic_card pa-lg shadow-soft">
 					<div class="flex align-items-t">
-						<div class="flex-item fs-2 mr-sm text-primary-7">
+						<div class="flex-item fs-4 mr-sm text-primary-7">
 							{!! $topic->icon !!}
 						</div>
 						<div class="flex-item">
