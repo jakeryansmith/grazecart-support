@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
 
 class Faq extends Model
 {
@@ -15,6 +15,11 @@ class Faq extends Model
     public function searchableAs()
     {
         return config('scout.algolia.index');
+    }
+
+    public function getScoutKey()
+    {
+        return 'faq:'.$this->id;
     }
 
     public function toSearchableArray()

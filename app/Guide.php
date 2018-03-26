@@ -5,7 +5,6 @@ namespace App;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
-use League\HTMLToMarkdown\HtmlConverter;
 
 class Guide extends Model
 {
@@ -16,6 +15,11 @@ class Guide extends Model
     public function searchableAs()
     {
         return config('scout.algolia.index');
+    }
+
+    public function getScoutKey()
+    {
+        return 'guide:'.$this->id;
     }
 
     public function toSearchableArray()
@@ -43,11 +47,5 @@ class Guide extends Model
                 'source' => 'title'
             ]
         ];
-    }
-
-    public function markdown($field = 'body')
-    {
-//        return (new HtmlConverter())->convert($this->{$field});
-        return $this->{$field};
     }
 }

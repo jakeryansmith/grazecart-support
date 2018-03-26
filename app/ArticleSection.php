@@ -8,7 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 
 class ArticleSection extends Model
 {
-    use Sluggable;
+    use Sluggable, Searchable;
 
     protected $guarded = ['id'];
 
@@ -17,6 +17,11 @@ class ArticleSection extends Model
     public function searchableAs()
     {
         return config('scout.algolia.index');
+    }
+
+    public function getScoutKey()
+    {
+        return 'article_section:'.$this->id;
     }
 
     public function toSearchableArray()
@@ -44,11 +49,6 @@ class ArticleSection extends Model
                 'source' => 'title'
             ]
         ];
-    }
-
-    public function markdown()
-    {
-        return $this->body;
     }
 
     /**
