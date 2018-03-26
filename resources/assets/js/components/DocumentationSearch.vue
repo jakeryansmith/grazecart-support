@@ -2,24 +2,24 @@
   <div class="documentationSearch">
     <form action="/docs/search" method="GET" id="searchForm">
     <ais-index
-      :query="query" 
+      :query="searchQuery" 
       :search-store="articleStore" 
       :index-name="documentationIndex" 
-      :auto-search="true" 
+      :auto-search="false" 
     >
     </ais-index>
     <ais-index
-      :query="query" 
+      :query="searchQuery" 
       :search-store="guideStore" 
       :index-name="guidesIndex" 
-      :auto-search="true" 
+      :auto-search="false" 
     >
     </ais-index>
     <ais-index
-      :query="query" 
+      :query="searchQuery" 
       :search-store="faqStore" 
       :index-name="faqIndex" 
-      :auto-search="true" 
+      :auto-search="false" 
     >
     </ais-index>
     <div 
@@ -43,12 +43,12 @@
         @keydown.enter.prevent="select" 
         @keydown.esc="clearResults()"
       >
-      <span class="fas fa-times-circle" v-show="query.length" @click="clearResults()"></span>
       <div class="searchInput_placeholder" v-show="!query.length"><span class="text-primary">Search</span> docs, faqs, guides</div>
+      <span class="fas fa-times-circle" v-show="query.length" @click="clearResults()"></span>
     </div>
     </form>
-      <div v-show="query.length > 0 && searchResults.length && showResults" class="documentationSearch__resultsList shadow">
-        <ul class="text-left">
+      <div v-show="searchResults.length > 0 && searchResults.length && showResults" class="documentationSearch__resultsListContainer shadow">
+        <ul class="text-left documentationSearch__resultsList">
           <li 
             v-for="result in searchResults" 
             :key="result.objectID+result.type" 
@@ -107,6 +107,11 @@
         return articleStore.results.concat(guideStore.results).concat(faqStore.results);
       },
 
+      searchQuery: function()
+      {
+        return this.query.length >= 3 ? this.query : '';
+      },
+
       documentationIndex: function()
       {
         return window.GrazeCart.env+'_GC_DOCUMENTATION';
@@ -138,8 +143,6 @@
       clearResults: function()
       {
         this.query = '';
-        // this.articleStore.query = '';
-        // this.guideStore.query = '';
       },
 
       select: function() {
