@@ -72,6 +72,7 @@
   }
   li {
     a {
+      position: relative;
       display: block;
       padding: 1rem;
       border-bottom: solid 1px #f5f8f9;
@@ -91,6 +92,32 @@
 
 .documentationSearch__resultsListDescription {
   letter-spacing: 0.5px;
+}
+
+.type_guide:after {
+  content: 'Guide';
+  display: inline-block;
+  font-size: 11px;
+  background-color: #ebf0ee;
+  margin-left: 0.5rem;
+  top: 10px;
+  right: 10px;
+  border-radius: 0.25rem;
+  color: #7c8381;
+  padding: 0.25rem 0.33rem;
+}
+
+.type_faq:after {
+  content: 'FAQ';
+  display: inline-block;
+  font-size: 11px;
+  background-color: #ebf0ee;
+  margin-left: 0.5rem;
+  top: 10px;
+  right: 10px;
+  border-radius: 0.25rem;
+  color: #7c8381;
+  padding: 0.25rem 0.33rem;
 }
 
 .algolia-powered-by {

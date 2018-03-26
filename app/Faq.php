@@ -14,12 +14,7 @@ class Faq extends Model
 
     public function searchableAs()
     {
-        return config('scout.algolia.index');
-    }
-
-    public function getScoutKey()
-    {
-        return 'faq:'.$this->id;
+        return app()->environment().'_GC_FAQ';
     }
 
     public function toSearchableArray()
@@ -29,7 +24,7 @@ class Faq extends Model
             'title' => $this->title,
             'description' => $this->description,
             'keywords' => $this->keywords,
-            'type' => 'section',
+            'type' => 'faq',
             'url' => $this->url,
             'sort_order' => $this->sort_order
         ];

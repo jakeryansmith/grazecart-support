@@ -70,6 +70,11 @@
         </div>
     </div>
 </div>
+<script>
+    window.GrazeCart = {
+        env: '{{ app()->environment() }}'
+    }
+</script>    
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap-dropdown.min.js"></script>
 <script src="/js/marketing.js"></script>

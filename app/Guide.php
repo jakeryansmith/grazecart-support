@@ -14,12 +14,7 @@ class Guide extends Model
 
     public function searchableAs()
     {
-        return config('scout.algolia.index');
-    }
-
-    public function getScoutKey()
-    {
-        return 'guide:'.$this->id;
+        return app()->environment().'_GC_GUIDES';
     }
 
     public function toSearchableArray()

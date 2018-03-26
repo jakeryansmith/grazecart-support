@@ -16,12 +16,7 @@ class ArticleSection extends Model
 
     public function searchableAs()
     {
-        return config('scout.algolia.index');
-    }
-
-    public function getScoutKey()
-    {
-        return 'article_section:'.$this->id;
+        return app()->environment().'_GC_DOCUMENTATION';
     }
 
     public function toSearchableArray()
@@ -31,7 +26,7 @@ class ArticleSection extends Model
             'title' => $this->title,
             'description' => $this->description,
             'keywords' => $this->keywords,
-            'type' => 'section',
+            'type' => 'documentation',
             'url' => $this->url,
             'sort_order' => $this->sort_order
         ];
