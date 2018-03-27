@@ -56,7 +56,7 @@
 							rows="20" 
 							placeholder="Use markdown to style text." 
 							id="body_content"
-						>{{ $guide->markdown('draft_body') }}</textarea>
+						>{{ $guide->draft_body }}</textarea>
 					</div>
 				@else
 					<div class="form-group">
@@ -70,7 +70,7 @@
 							class="form-control" 
 							rows="20" 
 							id="body_content"
-						>{{ $guide->markdown('body') }}</textarea>
+						>{{ $guide->body }}</textarea>
 					</div>
 				@endif
 				<div class="form-group text-right">
@@ -136,12 +136,17 @@
             toggle: function()
             {
                 let content = this.app.source.getCode();
+                window.eventHub.$emit('showProgressBar');
                 $.ajax({
                     url: '/admin/guides/{{ $guide->id }}',
                     type: 'put',
                     data: {
                         "_token": "{{ csrf_token() }}",
                         'body': content
+                    },
+                    success: function(data)
+                    {
+                        window.eventHub.$emit('hideProgressBar');
                     }
                 });
             }

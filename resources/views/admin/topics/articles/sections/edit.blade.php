@@ -50,7 +50,7 @@
 								class="form-control" 
 								rows="10" 
 								id="body_content"
-							>{{ $section->markdown() }}</textarea>
+							>{{ $section->body }}</textarea>
 						</div>
 						<div class="form-group">
 							<label>Keywords</label>
