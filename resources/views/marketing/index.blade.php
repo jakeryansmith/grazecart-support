@@ -16,7 +16,7 @@
 
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fas fa-info-circle"></i>
+						<i class="far fa-book"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-s text-indent-minus-2">
@@ -33,7 +33,7 @@
 			<a href="/faqs" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fa fa-question-circle"></i>
+						<i class="far fa-question-circle"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -49,7 +49,7 @@
 			<a href="/guides" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fas fa-user-circle"></i>
+						<i class="far fa-user-circle"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -65,7 +65,7 @@
 			<a href="https://www.facebook.com/groups/grazecartForum/" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fa fa-comments"></i>
+						<i class="far fa-comments"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -81,7 +81,7 @@
 			<a href="https://grazecart.com/contact" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fa fa-envelope-open"></i>
+						<i class="far fa-envelope-open"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">
@@ -113,7 +113,7 @@
 			<a href="http://kimhitzfieldphotography.zenfolio.com/" class="helpIndex_card pa-lg shadow-soft">
 				<div class="flex align-items-t">
 					<div class="flex-item fs-6 mr-lg text-primary-7">
-						<i class="fas fa-image"></i>
+						<i class="far fa-image"></i>
 					</div>
 					<div class="flex-item">
 						<div class="text-gray fs-4 bold mb-sm text-indent-minus-2">

@@ -1,5 +1,13 @@
 @extends('marketing.layout', ['pageTitle' => $guide->title, 'layout' => 'main_container--guide'])
 
+@section('head')
+<meta property="og:url" content="{{ url('/guides/'.$guide->slug) }}" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{ $guide->title }}" />
+<meta property="og:description" content="{{ $guide->description }}" />
+<meta property="og:image" content="{{ $guide->cover_photo }}" />
+@stop
+
 @section('page_header')
 	<div class="pageHeader_container">
 		<div class="pageHeader_innerContainer flex align-items-m">

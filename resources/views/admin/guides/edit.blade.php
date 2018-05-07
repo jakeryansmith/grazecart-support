@@ -54,7 +54,7 @@
 							name="draft_body" 
 							class="form-control" 
 							rows="20" 
-							placeholder="Use markdown to style text." 
+							placeholder="" 
 							id="body_content"
 						>{{ $guide->draft_body }}</textarea>
 					</div>

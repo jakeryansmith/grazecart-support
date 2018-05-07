@@ -1,22 +1,20 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
-    <title>{{ $pageTitle ?? 'GrazeCart: The Shopping Cart For Small Farms' }}</title>
-    <meta charset="utf-8">
-    <meta id="token" name="token" value="{{ csrf_token() }}">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="direct marketing, small farms, grassfed, ecommerce, seven sons farms">
-    <meta name="description" content="{{ $page_description or '' }}">
-    <meta name="referrer" content="origin">
-    <meta name="twitter:site" content="@GrazeCart" />
-    @yield('head')
-    <link rel="stylesheet" href="{{ mix('/css/styles.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    {{-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> --}}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+<title>{{ $pageTitle ?? 'GrazeCart: The Shopping Cart For Small Farms' }}</title>
+<meta charset="utf-8">
+<meta id="token" name="token" value="{{ csrf_token() }}">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="keywords" content="direct marketing, small farms, grassfed, ecommerce, seven sons farms">
+<meta name="description" content="{{ $page_description or '' }}">
+<meta name="referrer" content="origin">
+<meta name="twitter:site" content="@GrazeCart" />
+@yield('head')
+<link rel="stylesheet" href="{{ mix('/css/styles.css') }}">
+<link href="/css/fontawesome-all.min.css" rel="stylesheet">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-17234537-8"></script>
     <script>
