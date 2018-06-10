@@ -2496,6 +2496,24 @@ ul.list-spacing-xxl > li {
   color: #34b292;
   border-bottom: solid 2px #34b292;
 }
+.navigation-vertical li {
+  display: block;
+}
+.navigation-vertical li a {
+  color: #636968;
+  padding: 0.5rem 0;
+  display: block;
+}
+.navigation-vertical li a i {
+  color: #b0b5b4;
+  margin-right: 0.5rem;
+}
+.navigation-vertical li a:hover {
+  color: #34b292;
+}
+.navigation-vertical li a:hover i {
+  color: #34b292;
+}
 .navigationBorder-top {
   border-top: solid 6px #34b292;
 }
@@ -2552,8 +2570,6 @@ ul.list-spacing-xxl > li {
   padding-top: 2px;
   line-height: 1rem;
   border-bottom: solid 2px transparent;
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
 }
 .navigation-items > li:hover,
 .navigation-items > li:focus {
@@ -2568,8 +2584,6 @@ ul.list-spacing-xxl > li {
   padding: 1rem 0 1rem 0;
   font-size: 15px;
   line-height: 1rem;
-  -webkit-transition: all ease-in-out 0.2s;
-  transition: all ease-in-out 0.2s;
 }
 .navigation-items > li > a:hover,
 .navigation-items > li > a:focus {
@@ -3439,8 +3453,6 @@ a.list-group-item:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: all ease-in-out 0.15s;
-  transition: all ease-in-out 0.15s;
 }
 .btn.disabled,
 .btn[disabled] {
@@ -4030,7 +4042,7 @@ button.close {
   margin-right: 0.5rem;
 }
 .row-medium {
-  max-width: 800px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
